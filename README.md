@@ -1,1 +1,1 @@
-# NFT Collection using IPFS.
+# Basic NFT Tokens.
