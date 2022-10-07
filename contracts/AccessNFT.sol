@@ -37,6 +37,7 @@ contract AccessNFT is ERC721, Ownable {
         require(totalSupply + _quantity <= maxSupply, "Max supply reached!");
         require(msg.value == _quantity * mintPrice, "Wrong Mint Value");
         require(walletMints[msg.sender] + _quantity <= maxPerWallet, "Cannot mint more than 2!");
+        WalletMints[msg.sender]++;
 
         for (uint256 i = 0; i < _quantity; i++) {
             uint256 newTokenId = totalSupply + 1;
